@@ -1,0 +1,181 @@
+<div>
+  <div class="sidebar">
+      <ul>
+          <li id="closeMenu"><svg xmlns="http://www.w3.org/2000/svg" height="24p" viewBox="0 -960 960 960"
+                  width="24px" fill="#FFFF00">
+                  <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/timeline">TimeLine</a></li>
+          <li><a href="/updates">Updates</a></li>
+          <li><a href="/glimpse">Glimpse</a></li>
+          <li><a href="/contacts">Contact Us</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/rahulophile/">Developer</a></li>
+      </ul>
+  </div>
+  <div class="navbar">
+      <div class="leftNav">
+          <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/timeline">Timeline</a></li>
+          </ul>
+      </div>
+      <div id="eventTitleText">
+          <h1><span style="color: yellow;">E</span><span style="color: rgb(255, 157, 0);">x</span><span
+                  style="color: rgb(255, 64, 0);">t</span><span style="color: blueviolet;">r<span><span
+                          style="color: aquamarine;">a</span><span
+                          style="color: blueviolet;">v</span><span style="color: aqua;">a</span><span
+                          style="color:chartreuse;">g</span><span
+                          style="color: rgb(30, 0, 255);">a</span><span style="color: red;">n</span><span
+                          style="color: burlywood;">z</span><span style="color: hotpink;">a</span>
+          </h1>
+      </div>
+      <div class="rightNav">
+          <ul>
+              <li><a href="/glimpse">Glimpse</a></li>
+              <li><a href="/updates">Updates</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/rahulophile/">Developer</a></li>
+          </ul>
+      </div>
+      <div class="menuNav">
+          <svg id="openMenu" xmlns="http://www.w3.org/2000/svg" color="yellow" height="34px"
+              viewBox="0 -960 960 960" width="34px" fill="#FFFF00">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+      </div>
+  </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+  .navbar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+}
+.sidebar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.264);
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  transition: 0.8s;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar ul li {
+  padding: 10px 0px;
+  list-style: none;
+}
+.sidebar ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+.leftNav {
+  width: 450px;
+  border-bottom: 2px solid yellow;
+  border-radius: 0 0 50px 0;
+}
+.rightNav {
+  width: 450;
+  border-bottom: 2px solid yellow;
+  border-radius: 0 0 0 50px;
+}
+.menuNav {
+  display: none;
+}
+.menuNav ul li {
+  list-style: none;
+}
+.menuNav ul li {
+  color: yellow;
+}
+.navbar div:nth-child(odd) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(30px);
+}
+
+.navbar div ul:nth-child(odd) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar div ul li {
+  list-style: none;
+  margin: 0px 40px;
+}
+.navbar div ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 600px){
+  .navbar {
+    background: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.706),
+      rgba(0, 0, 0, 0.455),
+      rgba(70, 69, 69, 0)
+    );
+  }
+  .navbar div:nth-child(odd) {
+    display: none;
+  }
+  .menuNav {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+  }
+}
+</style>
+<script>
+  const menuButton = document.getElementById("openMenu");
+const sidebar = document.querySelector(".sidebar");
+menuButton.addEventListener("click", function () {
+  sidebar.style.visibility = "visible";
+  menuButton.style.visibility = "hidden";
+  sidebar.style.left = "0px";
+});
+
+const closeMenuButton = document.getElementById("closeMenu");
+closeMenuButton.addEventListener("click", function () {
+  sidebar.style.visibility = "hidden";
+  menuButton.style.visibility = "visible";
+  sidebar.style.left = "-100vw";
+});
+
+const body = document.querySelector("body");
+const eventsPage = document.getElementById("eventsPage");
+</script>

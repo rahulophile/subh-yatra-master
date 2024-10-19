@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=SUSE:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/medialQuery.css">
+    <title>Extravaganza</title>
+</head>
+
+<body>
+    <div class="parentDiv">
+        <div class="websiteContainer">
+          <%- include('partials/navbar') %>   
+            <div>
+                <div id="home">
+                    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"
+                        class="innerSection">
+                        <div style="align-items: center;" class="innerDetails">
+                            <h1><i><span id="extravaganza-text">ExtraVaganza'24</span><span id="jashn-e-hunar">जश्न-ए-हुनर</span></i></h1>
+                            <h3 style="margin-top: 10px;"><i>Ignite Your Passion, Celebrate Your Culture!</i></h3>
+                            <div style="margin-top: 20px;">
+                                <a href="#"><button id="main-reg-button"><b>REGISTER NOW 🌈</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="afterSection"></div>
+                <div id="about">
+                    <div class="aboutContainer" style="width: 100vw;">
+                        <div class="aboutDiv">
+                            <div>
+                                <!-- <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/2h9CqRlHzrc?si=69yvoXSCt7D-Q54A" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe> -->
+                            </div>
+                        </div>
+                        <div id="aboutText">
+                            <p>Welcome to Extravaganza 2.0, the second edition of the cultural
+                                fest organized by Government
+                                Engineering College Vaishali! Following the success of our first fest, we’re back with
+                                even
+                                more
+                                excitement and
+                                creativity.
+                                Extravaganza 2.0 offers a platform to showcase talent and foster connections across
+                                colleges. With a
+                                wide range of events in music, dance, drama, and art, we invite everyone to participate
+                                and
+                                celebrate
+                                together.
+                                Join us for a vibrant cultural experience filled with creativity, energy, and passion.
+                                Let’s
+                                make
+                                Extravaganza 2.0 a fest to remember!
+                            </p>
+                        </div>
+                    </div>
+                    <div id="registerButton">
+                        <a href="#"><button>Register Now 🥳</button></a>
+                    </div>
+                </div>
+                <div class="events" id="eventsPage">
+                    <div>
+                        <div class="eventCard">
+                            <img src="/images/fashion_show_baner.png" alt="">
+                            <h3>Fashion Show</h3>
+                            <p>Join Us for a Spectacular Singing Night! Come showcase your
+                                vocal
+                                talents or simply enjoy an evening of beautiful music at our Singing Event! All are
+                                welcome,
+                                whether you’re a seasoned performer or a passionate enthusiast.</p>
+                        </div>
+                        <div class="eventCard">
+                            <img src="/images/Dance_banner.png" alt="">
+                            <h3>Dance</h3>
+                            <p style="font-size: 12px;">Come unleash your creativity and embrace the beauty of tradition
+                                at
+                                our Rangoli event! Whether you're a beginner or an experienced artist, thi is the
+                                perfect
+                                opportunity tonexpress yourself through colors and designs</p>
+                        </div>
+                        <div class="eventCard">
+                            <img src="/images/Music_banner.png" alt="">
+                            <h3>Music</h3>
+                            <p style="font-size: 12px;">Dance the Night Away at Our Dance Extravaganza! Get ready to
+                                move
+                                and groove at our Dancing Event! Whether you're a dancer or just love to enjoy the
+                                rhythm,
+                                this event is for you!</p>
+                        </div>
+                    </div>
+                    <div id="moreEventsButton">
+                        <a href="events.html">
+                            <button>More Events 😎</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="competitions" id="CompetitionsPage">
+                    <div>
+                            <div class="competitionCard">
+                                <img src="/images/treasure_hunt_banner.png" alt="">
+                                <h3>Treasure Hunt</h3>
+                                <p style="font-size: 12px;">Join Us for a Spectacular Singing Night! Come showcase your
+                                    vocal
+                                    talents or simply enjoy an evening of beautiful music at our Singing Event! All are
+                                    welcome,
+                                    whether you’re a seasoned performer or a passionate enthusiast.</p>
+                            </div>
+                        <div class="competitionCard">
+                            <img src="/images/photography_banner.png" alt="">
+                            <h3>E-Sports</h3>
+                            <p style="font-size: 12px;">Come unleash your creativity and embrace the beauty of tradition
+                                at
+                                our Rangoli event! Whether you're a beginner or an experienced artist, thi is the
+                                perfect
+                                opportunity tonexpress yourself through colors and designs</p>
+                        </div>
+                        <div class="competitionCard">
+                            <img src="/images/graphics_banner.png" alt="">
+                            <h3>Quizes</h3>
+                            <p style="font-size: 12px;">Dance the Night Away at Our Dance Extravaganza! Get ready to
+                                move
+                                and groove at our Dancing Event! Whether you're a dancer or just love to enjoy the
+                                rhythm,
+                                this event is for you!</p>
+                        </div>
+                    </div>
+                    <div id="moreCompetitionsButton">
+                        <a href="#">
+                            <button>More Competitions 🤑</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="addressBar">
+                    <div>
+                        <a target="_blank" href="https://www.instagram.com/extravaganzagecvaishali?igsh=YzljYTk1ODg3Zg=="><img src="media/svgs/icons8-instagram.svg" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/Gecvaishaliofficial?ref=embed_page"><img src="media/svgs/icons8-facebook.svg" alt=""></a>
+                        <a target="_blank" href="https://x.com/extravaganza02"><img src="media/svgs/icons8-twitter.svg" alt=""></a>
+                        <a href=""><img src="media/svgs/icons8-youtube.svg" alt=""></a>
+                        <a href=""><img src="media/svgs/icons8-linkedin.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <p>© Extravaganza GEC Vaishali ❤️</p>
+                    </div>
+                </div>
+                <%- include('partials/footer') %>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

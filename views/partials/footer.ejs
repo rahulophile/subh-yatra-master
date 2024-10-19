@@ -1,0 +1,100 @@
+<div class="footer">
+  <div class="footerContent">
+      <div class="leftFooter">
+          <ul>
+              <li><a href="/contacts">Contact</a></li>
+              <li><a href="/aboutUs">About Us</a></li>
+          </ul>
+      </div>
+      <div class="footerGap"></div>
+      <div class="rightFooter">
+          <ul>
+              <li><a target="_blank" href="https://www.instagram.com/extravaganzagecvaishali?igsh=YzljYTk1ODg3Zg=="><img src="/svgs/icons8-instagram.svg" alt=""></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/Gecvaishaliofficial?ref=embed_page"><img src="/svgs/icons8-facebook.svg" alt=""></a></li>
+              <li><a target="_blank" href="https://x.com/extravaganza02"><img src="/svgs/icons8-twitter.svg" alt=""></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/@ExtravaganzaGECVaishali/featured"><img src="/svgs/icons8-youtube.svg" alt=""></a></li>
+              <li><a href=""><img src="/svgs/icons8-linkedin.svg" alt=""></a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+  .footer {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+}
+.footerContent {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerContent div {
+  height: 100%;
+}
+.footerContent div:nth-child(odd) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(30px);
+}
+.footerContent div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footerContent div ul li {
+  list-style: none;
+  /* margin: 0px 50px; */
+}
+.footerContent div:nth-child(1) ul li {
+  margin: 0px 50px;
+}
+.footerContent div ul li a {
+  text-decoration: none;
+  color: white;
+}
+.leftFooter {
+  width: 400px;
+  border-top: 2px solid yellow;
+  border-radius: 0 50px 0 0;
+}
+.footerGap {
+  visibility: hidden;
+}
+.rightFooter {
+  width: 450px;
+  border-top: 2px solid yellow;
+  border-radius: 50px 0 0 0;
+}
+.rightFooter ul {
+  width: 100%;
+}
+.rightFooter ul li {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media only screen and (max-width: 600px){
+  .footer {
+    display: none;
+  }
+  .footerContent {
+    display: none;
+  }
+}
+</style>

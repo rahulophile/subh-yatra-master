@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+body {
+  background: black;
+  overflow-y: scroll;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  text-align: start;
+}
+.eventsContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/pc_bg.jpg");
+  /* padding: 100px 50px; */
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  color: #ffffff;
+}
+.eventTitleBar h2,
+p {
+  text-align: center;
+}
+.eventTitleBar h2 {
+  font-size: 35px;
+}
+.eventTitleBar p {
+  margin-top: 20px;
+}
+.childContainer {
+  margin: 50px 0px 0px 0px;
+  padding: 0px 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  justify-items: center;
+  align-items: center;
+}
+.eventsContainer a {
+  text-decoration: none;
+  color: white;
+}
+.eventCard {
+  padding: 20px;
+  border-radius: 20px;
+  border: 10px solid rgba(128, 128, 128, 0.361);
+  border: 2px solid rgb(147, 147, 3);
+  background: rgba(114, 114, 3, 0.478);
+  height: 400px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.eventCard:hover {
+  box-shadow: 3px 3px 10px rgb(97, 97, 1), -3px -3px 10px rgb(97, 97, 1);
+}
+.eventCard img {
+  height: 180px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 0, 0.586);
+}
+
+@media only screen and (max-width: 600px){
+    .childContainer {
+        grid-template-columns: 1fr;
+      }
+      .eventTitleBar h2{
+        font-size: 25px;
+      }
+      .eventTitleBar p{
+        font-size: 10px;
+      }
+}

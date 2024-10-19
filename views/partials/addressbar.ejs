@@ -1,0 +1,57 @@
+<div class="addressBar">
+  <div>
+    <a target="_blank" href="https://www.instagram.com/extravaganzagecvaishali?igsh=YzljYTk1ODg3Zg=="><img
+        src="/svgs/icons8-instagram.svg" alt=""></a>
+    <a target="_blank" href="https://www.facebook.com/Gecvaishaliofficial?ref=embed_page"><img
+        src="/svgs/icons8-facebook.svg" alt=""></a>
+    <a target="_blank" href="https://x.com/extravaganza02"><img src="/svgs/icons8-twitter.svg" alt=""></a>
+    <a href=""><img src="/svgs/icons8-youtube.svg" alt=""></a>
+    <a href=""><img src="/svgs/icons8-linkedin.svg" alt=""></a>
+  </div>
+  <div>
+    <p>© Extravaganza GEC Vaishali ❤️</p>
+  </div>
+</div>
+<style>
+  .addressBar {
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.205),
+        rgba(59, 59, 59, 0.04));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .addressBar div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    padding: 0px 90px;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .addressBar div:nth-child(1) a img {
+    height: 20px;
+  }
+
+  .addressBar div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 10px 0px;
+    font-size: 22px;
+  }
+  @media only screen and (max-width: 600px){
+  .addressBar div p {
+    font-size: 15px;
+  }
+  .addressBar div:nth-child(1) {
+    visibility: visible;
+  }
+  }
+</style>

@@ -1,0 +1,690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+body {
+  z-index: -1111;
+  width: 100vw;
+  background: #0b0c10;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.websiteContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/pc_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.sidebar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.264);
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  transition: 0.8s;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar ul li {
+  padding: 10px 0px;
+  list-style: none;
+}
+.sidebar ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+.leftNav {
+  width: 450px;
+  border-bottom: 2px solid yellow;
+  border-radius: 0 0 50px 0;
+}
+.rightNav {
+  width: 450;
+  border-bottom: 2px solid yellow;
+  border-radius: 0 0 0 50px;
+}
+.menuNav {
+  display: none;
+}
+.menuNav ul li {
+  list-style: none;
+}
+.menuNav ul li {
+  color: yellow;
+}
+.navbar div:nth-child(odd) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.445);
+}
+
+.navbar div ul:nth-child(odd) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar div ul li {
+  list-style: none;
+  margin: 0px 40px;
+}
+.navbar div ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.footer {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footerContent {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerContent div {
+  height: 100%;
+}
+.footerContent div:nth-child(odd) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.445);
+}
+.footerContent div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footerContent div ul li {
+  list-style: none;
+  /* margin: 0px 50px; */
+}
+.footerContent div:nth-child(1) ul li {
+  margin: 0px 50px;
+}
+.footerContent div ul li a {
+  text-decoration: none;
+  color: white;
+}
+.leftFooter {
+  width: 400px;
+  border-top: 2px solid yellow;
+  border-radius: 0 50px 0 0;
+}
+.footerGap {
+  visibility: hidden;
+}
+.rightFooter {
+  width: 450px;
+  border-top: 2px solid yellow;
+  border-radius: 50px 0 0 0;
+}
+.rightFooter ul {
+  width: 100%;
+}
+.rightFooter ul li {
+  margin: 0;
+  padding: 0;
+}
+#home {
+  overscroll-behavior: none;
+  width: 100%;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  /* position: absolute;
+    top: 0;
+    left: 0; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* /* transition: 3s;  */
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  /* animation: animate 26s ease-in-out infinite; */
+  position: relative;
+}
+.innerDetails {
+  font-size: 25px;
+}
+#extravaganza-text {
+  color: yellow;
+  font-size: 2em;
+}
+#jashn-e-hunar {
+  color: red;
+  font-size: 0.8em;
+  margin-left: 20px;
+}
+.innerSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+@keyframes animate {
+  0% {
+    background-image: url(mobile-bg.jpg);
+  }
+  20% {
+    background-image: url(website-background.jpg);
+  }
+  40% {
+    background-image: url(mobile-bg.jpg);
+  }
+  60% {
+    background-image: url(website-background.jpg);
+  }
+  80% {
+    background-image: url(mobile-bg.jpg);
+  }
+  100% {
+    background-image: url(website-background.jpg);
+  }
+}
+#main-reg-button {
+  cursor: pointer;
+  font-weight: 800px;
+  font-size: 15px;
+  margin-top: 10px;
+  outline: 3px solid rgb(255, 191, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: rgba(17, 17, 17, 0.076);
+  backdrop-filter: blur(80px);
+  color: rgb(255, 191, 0);
+}
+#main-reg-button:hover {
+  outline: 4px solid rgb(176, 133, 5);
+  background: rgba(132, 253, 71, 0.076);
+  background: transparent;
+  backdrop-filter: blur(50px);
+  color: rgb(255, 191, 0);
+  transition: 0.2s;
+}
+.afterSection {
+  height: 30vh;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.405),
+    rgba(59, 59, 59, 0)
+  );
+}
+#about {
+  height: calc(100vh - env(safe-area-inset-bottom));
+  width: 100wh;
+  line-height: 30px;
+  word-spacing: 0px;
+}
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 100px;
+  gap: 30px;
+  font-size: 16px;
+}
+#about div div {
+  width: 100%;
+  overflow: hidden;
+}
+.aboutDiv {
+  overflow: hidden;
+  padding: 30px;
+  /* padding: 100px; */
+}
+.aboutDiv div {
+  border-radius: 20px;
+  box-shadow: -5px -5px 20px rgba(255, 255, 0, 0.5),
+    5px 5px 20px rgba(255, 255, 0, 0.5);
+  height: 300px;
+}
+#about div div {
+  overflow: hidden;
+}
+#aboutText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about div p {
+  font-size: 1.1em;
+}
+#registerButton {
+  padding: 40px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#registerButton button {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: rgb(52, 52, 52);
+  font-size: 0.8em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: rgb(255, 226, 4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+#registerButton button:hover {
+  background: gray;
+  padding: 10px 30px;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+.events {
+  padding-top: 20px;
+  min-height: 100vh;
+  width: 100%;
+}
+.events div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.events div .eventCard {
+  height: 450px;
+  width: 300px;
+  background: rgba(255, 0, 0, 0.1);
+  color: rgb(231, 226, 226);
+  backdrop-filter: blur(0px);
+  border: 5px solid rgba(247, 103, 6, 0.3);
+  background-color: rgba(143, 6, 6, 0.433);
+  /* box-shadow: -5px -5px 10px rgba(255, 0, 0, 0.5),5px 5px 10px rgba(255, 0, 0, 0.5); */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 20px;
+  overflow: hidden;
+}
+#event-poster {
+  height: 300px;
+  width: 100%;
+  background: url(media/images/rangoli-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 0.5px solid red;
+}
+#event-details {
+  height: 150px;
+  width: 100%;
+  font-size: 16px;
+}
+.eventCard p {
+  font-size: 12px;
+}
+.eventCard img {
+  height: 250px;
+  border-radius: 15px;
+  border: 0.5px solid red;
+}
+.events div button {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: rgb(52, 52, 52);
+  font-size: 0.8em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+.events div button:hover {
+  background: gray;
+  padding: 10px 30px;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+#moreEventsButton {
+  margin-top: 50px;
+}
+.competitions {
+  padding-top: 20px;
+  min-height: 100vh;
+  width: 100%;
+}
+.competitions div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.competitions div .competitionCard {
+  height: 450px;
+  width: 300px;
+  background: rgba(1, 111, 255, 0.245);
+  color: rgb(231, 226, 226);
+  backdrop-filter: blur(0px);
+  border: 5px solid rgba(6, 191, 247, 0.3);
+  /* box-shadow: -5px -5px 10px rgba(255, 0, 0, 0.5),5px 5px 10px rgba(255, 0, 0, 0.5); */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 20px;
+  overflow: hidden;
+}
+.competitionCard img {
+  height: 250px;
+  border-radius: 15px;
+  border: 0.5px solid rgb(0, 187, 255);
+}
+.competitions div button {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: rgb(52, 52, 52);
+  font-size: 0.8em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: rgb(0, 191, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+.competitions div button:hover {
+  background: gray;
+  padding: 10px 30px;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+#moreCompetitionsButton {
+  margin-top: 50px;
+}
+.addressBar {
+  height: 20vh;
+  width: 100vw;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.205),
+    rgba(59, 59, 59, 0.04)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.addressBar div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  padding: 0px 90px;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+}
+.addressBar div:nth-child(1) a img {
+  height: 20px;
+}
+
+.addressBar div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 10px 0px;
+  font-size: 22px;
+}
+@media only screen and (max-width: 600px) {
+  .innerDetails {
+    padding: 0px 20px;
+    font-size: 12px;
+  }
+  #extravaganza-text {
+    color: yellow;
+    font-size: 1.4em;
+  }
+  #jashn-e-hunar {
+    color: red;
+    font-size: 0.7em;
+    margin-left: 5px;
+  }
+  #main-reg-button{
+    margin-top: 5px;
+    font-size: 10px;
+    outline: 2px solid rgb(255, 191, 0);
+  }
+  #home {
+    background-image: url("media/images/mob_bg.jpg");
+  }
+  .navbar {
+    background: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.706),
+      rgba(0, 0, 0, 0.455),
+      rgba(70, 69, 69, 0)
+    );
+  }
+  .aboutContainer {
+    padding: 0px 30px;
+    width: 100vw;
+    flex-direction: column;
+  }
+  .aboutContainer div {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .aboutDiv div {
+    height: 170px;
+  }
+  .navbar div:nth-child(odd) {
+    display: none;
+  }
+  .menuNav {
+    display: block;
+  }
+  /* .navbar div:nth-child(even){
+        position: fixed;
+        top: 0;
+        left: 0;
+    } */
+  #eventTitleText h1 {
+    font-size: 1.5em;
+  }
+  #about div p {
+    font-size: 1em;
+    line-height: 20px;
+    text-align: center;
+  }
+  #about div:nth-child(1) {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about div iframe {
+    height: 200px;
+  }
+  #about img {
+    width: 100%;
+  }
+  .infoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .infoDiv div {
+    width: 90vw;
+    height: 100vh;
+    background-image: url(media/images/graduation-scroll.jpg);
+  } */
+  .footer {
+    display: none;
+  }
+  .footerContent {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+  }
+  .events div,
+  .competitions div {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .events,
+  .competitions {
+    margin-top: 100px;
+  }
+  .events div .eventCard {
+    width: 280px;
+    height: 400px;
+  }
+  .eventCard img{
+    width: 200px;
+    height: 200px;
+  }
+  .eventCard h3{
+    color: yellow;
+  }
+  .eventCard p{
+    font-size: 12px;
+  }
+  .addressBar div p {
+    font-size: 15px;
+  }
+  .addressBar div:nth-child(1) {
+    visibility: visible;
+  }
+
+  /* Events Wale Page ka mediaQuery */
+
+  .childContainer {
+    grid-template-columns: 1fr;
+  }
+  .eventTitleBar h2{
+    font-size: 25px;
+  }
+  .eventTitleBar p{
+    font-size: 10px;
+  }
+
+  /* Particular Event Wale Page ka */
+  .leftArea button{
+    font-size: 10px;
+    padding: 7px 15px;
+  }
+  .middleArea{
+    display: none;
+  }
+  .particularEventParent div:nth-child(odd){
+    width: 100%;
+  }
+  .particularEventParent {
+    flex-direction: column
+  }
+  .eventOverview div:nth-child(even){
+    display: none;
+  }
+  .eventOverview{
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+  }
+  .rightArea{
+    padding: 50px;
+  }
+
+  /* Timeline wala page ke liye */
+
+  .timeline{
+    margin: 50px auto;
+  }
+  .timeline::after{
+    left: 31px;
+  }
+  .container{
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .textBox{
+    font-size: 13px;
+  }
+  .textBox small{
+    margin-bottom: 10px;
+  }
+  .rightContainer{
+    left: 0;
+  }
+  .leftContainer img, .rightContainer img{
+    left: 10px;
+  }
+  .leftContainerArrow, .rightContainerArrow{
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}
+

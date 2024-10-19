@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+body {
+  background: black;
+  overflow-y: scroll;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
+.glimpseParent {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/pc_bg.jpg");
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  color: white;
+  position: relative;
+}
+.glimpseParent h2 {
+  font-size: 35px;
+}
+.glimpseParent p {
+  width: 500px;
+  margin-top: 15px;
+}
+.glimpseTitleBar h2,p{
+  text-align: center;
+}
+.glimpseChild {
+    padding:0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.portraitImages {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.portraitImages div {
+  height: 400px;
+  width: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 20px;
+  border: 7px solid rgba(0, 89, 255, 0.387);
+  overflow: hidden;
+}
+.glimpseParent div img {
+  width: 120%;
+}
+.landscapeImages {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.landscapeImages div {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border: 7px solid rgba(0, 89, 255, 0.387);
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .glimpseParent p {
+    width: 350px;
+    font-size: 0.8em;
+  }
+  .landscapeImages,
+  .portraitImages {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .landscapeImages div {
+    width: 100%;
+  }
+  .glimpseParent h2 {
+    font-size: 25px;
+  }
+  .glimpseParent p {
+    font-size: 10px;
+    width: 300px;
+  }
+}
