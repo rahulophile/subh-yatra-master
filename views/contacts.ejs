@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/contacts.css">
+    <title>Contact - Extraaganza'24</title>
 </head>
+
 <body>
-    
+    <div>
+        <div class="contactParent">
+            <%- include('partials/uppershade') %>
+                <%- include('partials/navbar') %>
+                    <div class="parentChild">
+                        <div class="aboutHeading">
+                            <h2><span style="color: goldenrod;">Contact</span> Us</h2>
+                            <p>Feel free to contact us for any immediate questions or concerns. We’d love to help you!
+                                📱
+                            </p>
+                        </div>
+                        <div class="contactPerson">
+                            <div class="personCard">
+                                <img src="images/rahul.jpeg" alt="">
+                                <h4 class="name">Rahul Raj</h4>
+                                <p class="work">Technical issues</p>
+                                <p class="phone">+91 7462022293</p>
+                            </div>
+                            <div class="personCard">
+                                <img src="images/bittu.jpeg" alt="">
+                                <h4 class="name">Bittu Kumar</h4>
+                                <p class="work">Accommodation issues</p>
+                                <p class="phone">+91 9263070180</p>
+                            </div>
+                            <div class="personCard">
+                                <img src="images/akash.jpeg" alt="">
+                                <h4 class="name">Akash Mishra</h4>
+                                <p class="work">Event issues</p>
+                                <p class="phone">+91 7857845665</p>
+                            </div>
+                            <div class="personCard">
+                                <img src="images/ayush.jpeg" alt="">
+                                <h4 class="name">Ayush Deep</h4>
+                                <p class="work">Event issues</p>
+                                <p class="phone">+91 6209117985</p>
+                            </div>
+                            <div class="personCard">
+                                <img src="images/dipu.jpeg" alt="">
+                                <h4 class="name">Dipu K Raj</h4>
+                                <p class="work">Other issues</p>
+                                <p class="phone">+91 7295808100</p>
+                            </div>
+                        </div>
+                        <div id="moreMentors"><a style="text-decoration: none; color: white;" href="#"><button
+                                    id="mentors">Our Event Mentors ---></button></a></div>
+                        <div class="child2">
+                            <div class="map">
+                                <address>
+                                    <h3>Address 📍</h3>
+                                    <h4>🏫 Government Engineering College Vaishali</h4>
+                                    <p> Shyampur, Mansurpur, Bidupur, Vaishali- 844115</p>
+                                </address>
+                            </div>
+                            <div class="contactContainer">
+                                <h3>Contact 📱</h3>
+                                <p>Text us on WhatsApp or Email us on given mail.</p>
+                                <section><img src="svgs/icons8-whatsapp.svg" alt="">
+                                    +91 1234567890</section>
+                                <section><img src="svgs/icons8-gmail.svg" alt="">extravaganzagecvaishali@gmail.com
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <%- include('partials/addressbar') %>
+                        <%- include('partials/footer') %>
+        </div>
+    </div>
 </body>
+
 </html>

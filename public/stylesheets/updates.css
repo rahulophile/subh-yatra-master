@@ -31,6 +31,7 @@ body {
   align-items: center;
   min-height: 100vh;
   width: 100vw;
+  padding: 0px 50px;
 }
 .updatesTitleBar h2 {
   text-align: center;
@@ -39,11 +40,85 @@ body {
 .updatesTitleBar p {
   margin-top: 20px;
 }
+.updatesContainer {
+  margin-top: 50px;
+  width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(179, 104, 29, 0.437);
+  backdrop-filter: blur(30px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.notification {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(0, 128, 0, 0.625);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.notification:nth-child(1) {
+  animation-delay: 0s;
+}
+.notification:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.notification:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.notification:nth-child(4) {
+  animation-delay: 0.75s;
+}
+.notification img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.notification a{
+  text-align: start; text-decoration: none; color: white;
+}
+.notification a span{
+  font-size: 15px; color: rgb(255, 183, 0);
+}
 @media only screen and (max-width: 600px) {
   .updatesParent h2 {
     font-size: 25px;
   }
   .updatesParent p {
+    font-size: 10px;
+  }
+  .updatesContainer{
+    width: 100%;
+  }
+  .notification{
+    height: 50px;
+  }
+  .notification a{
+    font-size: 13px;
+  }
+  .notification img{
+    height: 30px;
+    width: 30px;
+  }
+  .notification a span{
     font-size: 10px;
   }
 }

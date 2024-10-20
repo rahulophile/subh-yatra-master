@@ -51,6 +51,7 @@ p {
   color: white;
 }
 .eventCard {
+  cursor: pointer;
   padding: 20px;
   border-radius: 20px;
   border: 10px solid rgba(128, 128, 128, 0.361);
@@ -63,9 +64,55 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  animation: moveright 1s linear forwards;
+  opacity: 0;
 }
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.eventCard:nth-child(1) {
+  animation-delay: 0s;
+}
+.eventCard:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.eventCard:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.eventCard:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.eventCard:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.eventCard:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.eventCard:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.eventCard:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.eventCard:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.eventCard:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.eventCard:nth-child(11) {
+  animation-delay: 1s;
+}
+
 .eventCard:hover {
-  box-shadow: 3px 3px 10px rgb(97, 97, 1), -3px -3px 10px rgb(97, 97, 1);
+  box-shadow: 5px 5px 10px rgb(97, 97, 1), -5px -5px 10px rgb(97, 97, 1);
 }
 .eventCard img {
   height: 180px;

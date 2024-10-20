@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+body {
+  background: black;
+  overflow-y: scroll;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  text-align: start;
+}
+.aboutParent {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/pc_bg.jpg");
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  color: #ffffff;
+}
+.parentChild {
+  min-height: 100%;
+  width: 100%;
+  padding: 0px 100px;
+}
+.parentChild div{
+    animation: moveleft 0.7s linear forwards;
+  opacity: 0;
+}
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.parentChild div:nth-child(1) {
+  animation-delay: 0s;
+}
+.parentChild div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.para1 {
+  width: 100%;
+}
+.para1 h2 {
+  display: inline;
+  padding: 0px 0px 5px 0px;
+  border: none;
+  /* border-bottom: 1.5px solid rgba(0, 255, 255, 0.666); */
+  margin-top: 20px;
+  font-size: 35px;
+}
+.para1 p {
+  margin-top: 20px;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: justify;
+}
+.para2 {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.para3 {
+  width: 45%;
+  height: 500px;
+  background: rgba(215, 178, 66, 0.215);
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  border-radius: 20px;
+  /* border: 1px solid rgba(255, 255, 0, 0.349); */
+}
+.para4 {
+  width: 45%;
+  height: 500px;
+  background: rgba(61, 221, 221, 0.202);
+  backdrop-filter: blur(20px);
+  padding: 20px 20px 40px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+
+
+
+
+
+.para4::-webkit-scrollbar {
+  width: 8px;               /* Width of the scrollbar */
+}
+
+.para4::-webkit-scrollbar-thumb {
+  background-color: #03a7af;  
+  border-radius: 10px;       
+}
+
+.para4::-webkit-scrollbar-track {
+  background: transparent;       /* Color of the scrollbar track */
+}
+
+
+
+
+.para4 h3 {
+  text-align: center;
+  font-size: 35px;
+}
+.faculty {
+  border: 1px solid white;
+  background: linear-gradient(
+    to right,
+    rgba(7, 236, 236, 0.342),
+    rgba(58, 144, 144, 0.157)
+  );
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  border-radius: 25px;
+}
+.faculty:nth-child(odd) {
+  background: linear-gradient(
+    to left,
+    rgba(7, 236, 236, 0.342),
+    rgba(58, 144, 144, 0.157)
+  );
+}
+.faculty img {
+  height: 80px;
+  width: 80px;
+}
+.faculty section {
+  font-size: 15px;
+  text-align: justify;
+}
+.faculty-image {
+  width: 100px;
+}
+#prof-name {
+  color: rgb(0, 237, 201);
+  margin-top: 5px;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.heading div img {
+  width: 100px;
+  height: 100px;
+}
+.heading div h3 {
+  font-size: 35px;
+}
+#principal-message {
+  margin-top: 20px;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    .parentChild{
+        padding: 0px 50px;
+    }
+  .para1 h2 {
+    font-size: 25px;
+  }
+  .para1 p {
+    font-size: 12px;
+    line-height: 17px;
+    word-spacing: 2px;
+    text-align: start;
+  }
+  .para2 {
+    flex-direction: column;
+  }
+  .para3,
+  .para4 {
+    width: 100%;
+  }
+  .para3 {
+    padding: 30px;
+    height: 500px;
+  }
+  .heading div img {
+    width: 80px;
+    height: 80px;
+  }
+  .heading div h3 {
+    font-size: 22px;
+  }
+  .heading div p {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  #principal-message {
+    font-size: 14px;
+    line-height: 17px;
+    word-spacing: 2px;
+    text-align: left;
+  }
+  .para4 {
+    height: 500px;
+    padding: 10px 20px 30px 20px;
+  }
+  .para4 h3 {
+    margin-top: 0px;
+    font-size: 25px;
+  }
+  .faculty {
+    height: 110px;
+    gap: 15px;
+  }
+  .faculty section {
+    font-size: 12px;
+    line-height: 10px;
+    word-spacing: 2px;
+    text-align: left;
+  }
+  .faculty img {
+    height: 50px;
+    width: 50px;
+  }
+  #prof-name {
+    font-size: 7px;
+    color: rgb(0, 237, 201);
+    margin-top: 5px;
+  }
+}

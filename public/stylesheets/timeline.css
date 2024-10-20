@@ -68,100 +68,100 @@ body {
   animation-delay: 1s;
 }
 .container:nth-child(4) {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 .container:nth-child(5) {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 .container:nth-child(6) {
-  animation-delay: 5s;
+  animation-delay: 2.5s;
 }
 .container:nth-child(7) {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 .container:nth-child(8) {
-  animation-delay: 7s;
+  animation-delay: 3.5s;
 }
 .container:nth-child(9) {
-  animation-delay: 8s;
+  animation-delay: 4s;
 }
 .container:nth-child(10) {
-  animation-delay: 9s;
+  animation-delay: 4.5s;
 }
 .container:nth-child(11) {
-  animation-delay: 10s;
+  animation-delay: 5s;
 }
 .container:nth-child(12) {
-  animation-delay: 11s;
+  animation-delay: 5.5s;
 }
 .container:nth-child(13) {
-  animation-delay: 12s;
+  animation-delay: 6s;
 }
 .container:nth-child(14) {
-  animation-delay: 13s;
+  animation-delay: 6.5s;
 }
 .container:nth-child(15) {
-  animation-delay: 14s;
+  animation-delay: 7s;
 }
 .container:nth-child(16) {
-  animation-delay: 15s;
+  animation-delay: 7.5s;
 }
 .container:nth-child(17) {
-  animation-delay: 16s;
+  animation-delay: 8s;
 }
 .container:nth-child(18) {
-  animation-delay: 17s;
+  animation-delay: 8.5s;
 }
 .container:nth-child(19) {
-  animation-delay: 18s;
+  animation-delay: 9s;
 }
 .container:nth-child(20) {
-  animation-delay: 19s;
+  animation-delay: 9.5s;
 }
 .container:nth-child(21) {
-  animation-delay: 20s;
+  animation-delay: 10s;
 }
 .container:nth-child(22) {
-  animation-delay: 21s;
+  animation-delay: 10.5s;
 }
 .container:nth-child(23) {
-  animation-delay: 22s;
+  animation-delay: 11s;
 }
 .container:nth-child(24) {
-  animation-delay: 23s;
+  animation-delay: 11.5s;
 }
 .container:nth-child(25) {
-  animation-delay: 24s;
+  animation-delay: 12s;
 }
 .container:nth-child(26) {
-  animation-delay: 25s;
+  animation-delay: 12.5s;
 }
 .container:nth-child(27) {
-  animation-delay: 26s;
+  animation-delay: 13s;
 }
 .container:nth-child(28) {
-  animation-delay: 27s;
+  animation-delay: 13.5s;
 }
 .container:nth-child(29) {
-  animation-delay: 28s;
+  animation-delay: 14s;
 }
 .container:nth-child(30) {
-  animation-delay: 29s;
+  animation-delay: 14.5s;
 }
 .container:nth-child(31) {
-  animation-delay: 30s;
+  animation-delay: 15s;
 }
 .container:nth-child(32) {
-  animation-delay: 31s;
+  animation-delay: 15.5s;
 }
 .container:nth-child(33) {
-  animation-delay: 32s;
+  animation-delay: 16s;
 }
 .container:nth-child(34) {
-  animation-delay: 33s;
+  animation-delay: 16.5s;
 }
 .container:nth-child(35) {
-  animation-delay: 34s;
+  animation-delay: 17s;
 }
 
 .textBox {
@@ -209,9 +209,9 @@ body {
   );
   top: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -3px;  
   z-index: 1;
-  animation: moveline 10s linear forwards;
+  animation: moveline 17s linear forwards;
 }
 @keyframes moveline {
   0% {

@@ -32,15 +32,16 @@ body {
   width: 500px;
   margin-top: 15px;
 }
-.glimpseTitleBar h2,p{
+.glimpseTitleBar h2,
+p {
   text-align: center;
 }
 .glimpseChild {
-    padding:0px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .portraitImages {
   margin-top: 50px;
   width: 100%;
@@ -51,14 +52,24 @@ body {
   gap: 70px;
 }
 .portraitImages div {
-  height: 400px;
-  width: 250px;
+  position: relative;
+  height: 650px;
+  width: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 20px;
-  border: 7px solid rgba(0, 89, 255, 0.387);
+  border: 2px solid rgba(0, 89, 255, 0.551);
+  box-shadow: 5px 5px 10px rgba(0, 8, 255, 0.519), -5px -5px 10px rgba(0, 42, 255, 0.519);
   overflow: hidden;
+}
+.portraitImages div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .glimpseParent div img {
   width: 120%;
@@ -69,29 +80,40 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   margin-bottom: 50px;
 }
 .landscapeImages div {
-  width: 400px;
-  height: 250px;
+  position: relative;
+  width: 600px;
+  height: 350px;
   overflow: hidden;
-  border: 7px solid rgba(0, 89, 255, 0.387);
+  border: 2px solid rgba(255, 0, 0, 0.6);
   border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.519), -5px -5px 10px rgba(255, 0, 0, 0.519);
 }
-
+.landscapeImages div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media only screen and (max-width: 600px) {
-  .glimpseParent p {
+  /* .glimpseParent p {
     width: 350px;
     font-size: 0.8em;
-  }
+  } */
   .landscapeImages,
   .portraitImages {
     flex-direction: column;
     gap: 50px;
   }
   .landscapeImages div {
-    width: 100%;
+    width: 350px;
+    height: 200px;
   }
   .glimpseParent h2 {
     font-size: 25px;
